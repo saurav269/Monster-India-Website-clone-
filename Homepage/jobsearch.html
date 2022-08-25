@@ -4,11 +4,81 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Job Search</title>
     <style>
-        body{
-            margin : 0px;
+          body{
+            margin: 0px;
             padding: 0px;
+            cursor: pointer;
+        }
+        body button{
+            cursor: pointer;
+        }
+        #nav{
+            width: 100%;;
+            display: flex;
+            position: sticky;
+            top: 0px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            background-color:#f0f8ff;
+            height: 75px;
+        }
+        #nav > div{
+            display: flex;
+            border: 0px solid blue;
+            margin: 20px;
+        }
+        #nav > div:nth-child(1){
+            flex-grow: 2;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #nav > div:nth-child(1) > div{
+            border: 0px solid yellow;     
+        }
+        #nav > div:nth-child(1) > div > img{
+            width : 135px; 
+        }
+        #nav > div:nth-child(2){
+            flex-grow: 1;
+            display: flex; 
+          justify-content: start;        
+        }
+        #nav > div:nth-child(2) > button{
+         margin-left: 10px;
+         background-color: white;
+         padding: 10px; 
+         border-radius: 5px;
+         border-width: 1px;
+         text-align: center;
+        }
+        #nav > div:nth-child(2) > button:hover{
+            background-color: rgb(255, 153, 0);
+            color: white;
+        }
+        #nav > div:nth-child(1)>div:nth-child(2):hover{
+            color: rgb(159, 12, 159);
+        }
+        #nav > div:nth-child(1)>div:nth-child(3):hover{
+            color: rgb(159, 12, 159);
+        }
+        #nav > div:nth-child(1)>div:nth-child(4):hover{
+            color: rgb(159, 12, 159);
+        }
+        #nav > div:nth-child(1)>div:nth-child(6):hover{
+            color: rgb(159, 12, 159);
+        }
+        #nav > div:nth-child(1)>div>button{
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px;
+            color: #F7821b;
+            background-color: rgb(248, 202, 159);
+        }
+        #nav > div:nth-child(1)>div>button:hover{
+            color: rgb(159, 12, 159);
+
         }
         #maain{
             width: 100%;
@@ -18,10 +88,28 @@
         #advanceForm>div{
             margin-left: 180px;
         }
-       
     </style>
+
 </head>
 <body>
+    <div id="nav">
+        <div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg" alt=""/>
+            </div>
+            <div>JOB SEARCH</div>
+            <div>WORK FROM HOME</div>
+            <div>CAREER TIPS</div>
+            <div>
+                <button>PRIMIUM SERVICE</button>
+            </div>
+            <div>MORE</div>
+        </div>
+        <div>
+            <button>JOB SEEKER LOGIN</button>
+            <button>FOR EMPLOYERS</button>
+        </div>
+    </div>
     <div id="maain">
         <div id="advanceForm">
             <div>
@@ -94,5 +182,6 @@
         </div>
         <div></div>
     </div>    
+    
 </body>
 </html>
