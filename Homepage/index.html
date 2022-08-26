@@ -360,9 +360,6 @@
             color: white;
             font-size: 18px;
         }
-        /* #first>#new>button:hover{
-            background-color: #5D4DA8;
-        } */
         #wfh>div:nth-child(2)>div:nth-child(2)>div>p{
             color: blue;
 
@@ -866,7 +863,7 @@
             <div>
                 <img src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg" alt=""/>
             </div>
-            <div>JOB SEARCH</div>
+            <div><a href="jobsearch.html">JOB SEARCH</a></div>
             <div>WORK FROM HOME</div>
             <div>CAREER TIPS</div>
             <div>
@@ -875,7 +872,7 @@
             <div>MORE</div>
         </div>
         <div>
-            <button>JOB SEEKER LOGIN</button>
+            <button><a href="login.html">JOB SEEKER LOGIN</a></button>
             <button>FOR EMPLOYERS</button>
         </div>
     </div>
@@ -909,7 +906,7 @@
                     <h5>NEW TO MONSTER?</h5>
                     <h5>REGISTER WITH US</h5>
                     <P>Or</P>
-                    <button>
+                    <button id="buttonn">
                         UPLOAD RESUME<br>
                         We will create your profile
                     </button>
@@ -1356,4 +1353,9 @@
         <p>© 2021 Monster - All Rights Reserved</p>
     </div>          
 </body>
+<script>
+    document.getElementById("buttonn").addEventListener("click",function(){
+        alert("UPLOAD YOUR RESUME")
+    })
+</script>
 </html>

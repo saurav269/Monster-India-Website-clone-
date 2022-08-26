@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body{
+            background-color: #f5f5f5;
+        }
+        form{
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border: 1px solid white;
+            margin-top: 50px;
+            background-color: whitesmoke;
+        }
+        form>p{
+            color:grey;
+        }
+        input{
+            width: 80%;
+            margin-top: 20px;
+            height: 30px;
+            border: none;
+            border-bottom: 2px solid gray;
+            font-size: 15px;
+        }
+        button{
+            width: 80%;
+            font-size: 20px;
+            padding: 15px;
+            margin: 15px 0px 30px 0px;
+            color: white;
+            background-color: rgb(59, 21, 131);
+            border: none;
+            margin-bottom: 50px;
+            cursor: pointer;
+        }
+        form a{
+            text-decoration: none;
+        }
+        p{
+            font-family: arial;
+        }
+        span{
+            color: blue;
+        }
+        h1{
+            font-family: arial;
+            margin-top: 50px;
+        }
+        #or{
+            text-align: center;
+            font-size: 25px;
+            margin-top: 30px;
+        }
+        #soci{
+            text-align: center;
+            font-size: 18px;
+        }
+        #soci > p{
+            color: rgb(28, 25, 25);
+        }
+        #fcbk{
+            width : 42%;
+            border: 0px solid red;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            gap: 10px;
+        }
+        #googlee{
+            display: flex;
+            border: 1px solid gray;
+            width:50%;
+            font-size: 19px;
+            border-radius: 30px;
+        }
+        #googlee:hover{
+            background-color: rgb(245, 38, 38);
+            cursor: pointer;
+        }
+        #googlee > div:nth-child(2)>p:hover{
+            color: white;    
+        }
+        #googlee> div:nth-child(1){
+            width:30%;
+        }
+        #googlee>:nth-child(2){
+            margin-left: -17px;
+            color:grey;
+        }
+        #googlee>div>img{
+            width : 47%;
+            display: block;
+            margin-left: 18px;
+            margin-top: 12px;
+        }
+        #facebookk{
+            display: flex;
+            border:1px solid grey;
+            width : 50%;
+            font-size: 19px;
+            border-radius: 30px;
+        }
+        #facebookk:hover{
+            background-color: rgba(33, 33, 156, 0.81);
+            cursor: pointer;
+        }
+        #facebookk>div:nth-child(2)>p:hover{
+            color: white;  
+             
+        }
+        #facebookk>div:nth-child(1){
+            width:20%;
+        }
+        #facebookk>div:nth-child(2){
+            color:grey
+        }
+        #facebookk>div>img{
+          width:80%;
+          display: block;
+          margin-left: 8px;
+          margin-top: 12px;
+        }
+        #footer1{
+            width:100%;
+            background-color: #f5f5f5;
+            margin: auto;
+        }
+        .one{
+            width:90%;
+            display: flex;
+            margin-left: 50px;
+        }
+        .head{
+            width:28%;
+            line-height: 30px;
+            color: #5d4da8;
+        }
+        .bod{
+            line-height: 30px;
+        }
+        .head1{
+            width:11%;
+            color: #5d4da8;
+            line-height: 30px;
+        }
+        .head2{
+            width:13%;
+            color: #5d4da8;
+            line-height: 30px;
+
+        }
+        .head3{
+            width:15%;
+            color: #5d4da8;
+            line-height: 30px;
+
+        }
+        .head4{
+            width:10%;
+            color: #5d4da8;
+            line-height: 30px;
+        }
+        .bod >:hover{
+            color: #5d4da8;
+        }
+        #footer2 {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #f5f5f5;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #footer2>div:nth-child(1) {
+            display: flex;
+            align-items: center;
+        }
+
+        #footer2>div:nth-child(1)>input {
+            width: 200px;
+        }
+
+        #clogo {
+            display: flex;
+            align-items: center;
+        }
+
+        #clogo>div>img {
+            width: 50px;
+        }
+
+        #clogo>div:nth-child(2) {
+            margin-left: 10px;
+        }
+
+        #clogo>div:nth-child(2):hover {
+            color: #5D4DA8;
+        }
+
+        #mailLogo {
+            display: flex;
+            align-items: center;
+        }
+
+        #mailLogo>div>img {
+            width: 30px;
+        }
+
+        #mailLogo>div:nth-child(2) {
+            margin-left: 15px;
+            font-size: 20px;
+            margin-top: -10px;
+        }
+
+        #mailLogo>div:nth-child(2):hover {
+            color: #5D4DA8;
+            text-decoration: underline;
+        }
+
+        #logo1 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #logo1>div {
+            border: 0px solid greenyellow;
+            margin: auto;
+        }
+        #logo1>div>img {
+            width: 40px;
+            display: block;
+            margin: 20px;
+        }
+        #footer2>div>input {
+            font-size: 20px;
+        }
+        #footer3{
+            width:100%;
+            background-color: #5D4DA8;
+            color: white;
+        }
+        #toop1{
+            width:85%;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 22px;
+            margin: auto;
+            padding-top: 20px;
+        }
+        #bot{
+            width :85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            padding-bottom: 30px;        
+        }
+        #bot > div{
+            text-align: start;
+            font-size: 16px;
+        }
+        #bot>div:nth-child(1){
+            margin-left: 40px;
+        }
+        #bot>div:nth-child(3){
+            margin-left: -18px;
+        }
+        #bot>div:nth-child(5){
+          text-align: center;
+        }
+      #bot>#goo>div>img{
+            display: block;
+            padding-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <h1><a href= "index.html">WELCOME!</a></h1>
+        <h2>Log in using your Monster credentials</h2>
+        <input type="email" placeholder=" Email" id="email"><br></br>
+        <input type="password" placeholder=" Password" id="password"> <br></br>
+        <button id="btn">Login</button>
+        <p>Forget <span>Password?</span></p>
+        <p>Don't have an account? <span>Sign Up</span></p>
+    </form>
+    <div id="or">---------- OR ----------</div>
+    <div id="soci">
+        <p>With your social network</p>
+    </div>
+    <div id="fcbk">
+        <div id="googlee">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQiIMiyJJJ6Vc-dpEiuL8FRSrkhhqAqJdIe28ftzZbvcOpD3NyBXVlwAb9U8XXKp05Yq0&usqp=CAU" alt=""/>
+            </div>
+            <div>
+                <p>Login with Google</p>
+            </div>
+        </div>
+        <div id="facebookk">
+            <div>
+                <img src="https://www.nicepng.com/png/detail/512-5128984_04-904-circle-facebook-icon-png-white.png" alt=""/>
+            </div>
+            <div>
+                <p>Login with Facebook</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer1">
+        <div class="one">
+            <div class="head">
+                <p>Jobs by Locations</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Jobs in Bangalore | Jobs in Delhi | Jobs in Mumbai | Jobs in Chennai | Jobs in Hyderabad | Jobs in Kolkata | Jobs in Pune | Jobs in Chandigarh | Jobs in Lucknow | Jobs in Coimbatore | Jobs in Odisha | Jobs in Jaipur | Jobs in Ahmedabad | Jobs in Indore | Jobs in Nagpur | Jobs in Goa | Jobs in Noida | Jobs in Bhubaneswar | Jobs in Gurgaon | Jobs in Guwahati | Jobs in Dehradun | Jobs in Mysore | Jobs in Bhopal | Jobs in Vijayawada</p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head1">
+                <p>Jobs by Skill-IT</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Biotechnical Jobs | Digital Marketing Jobs | Graphic Design Jobs | Networking Jobs | Oracle Jobs | SEO Jobs | Software Testing Jobs | Sql Jobs | Web Design Jobs </p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head2">
+                <p>Jobs by Skill-Non IT</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Accounting Jobs | BPO Jobs | Call Center Jobs | Civil Engineering Jobs | Content Writting Jobs | Electrical Engineering Jobs |Event Management Jobs | Hotel Management Jobs | HR Jobs | Sales Jobs </p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head3">
+                <p>Jobs by Role</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Air Hostess Jobs | Accountant Jobs | Assistant Professor Jobs | Business Analyst Jobs | Computer Operator jobs | Data Analyst Jobs | Data Entry Operator Jobs | Fashion Designer Jobs | Graphics Designer jobs | Software Engineer Jobs</p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head1">
+                <p>International Jobs</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Jobs in Gulf | Jobs in Singapore | Jobs in Malaysia | Jobs in Philippines | Jobs in Hong Kong | Jobs in Vietnam | Jobs in Indonesia | Jobs in Thailand | Jobs in Dubai | Jobs in UAE</p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head4">
+                <p>Other Jobs</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Walk-in Jobs | Part Time Jobs | Contract Jobs | Jobs for Women | Fresher Jobs | Freelancer Jobs | Work from Home Jobs | 12th Pass Jobs | 10th Pass Jobs | Diploma Jobs</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer2">
+        <div>
+            <input type="text" placeholder="India"/>
+        </div>
+        <div id="clogo">
+            <div>
+                <img src="https://library.kissclipart.com/20180830/sqe/kissclipart-cell-phone-logo-transparent-clipart-telephone-call-04c36f52ead4bd3a.jpg" alt=""/>
+            </div>
+            <div>
+                <p>Toll No: +91-40-66116611<br>
+                    Toll Free No: 1-800-4196666</p>
+            </div>
+        </div>
+        <div id="mailLogo">
+             <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtyQ1Kdo8WNNJSho1NhEoawqJt6Dv_gP1XVL5NTiX42fbBlx02NPd73eJFuLHIAaAvTOQ&usqp=CAU" alt=""/>
+            </div>
+            <div>
+                <p>info@monsterindia.com</p>
+            </div>
+        </div>
+        <div id="logo1">
+            <div>
+                <img src="https://www.seekpng.com/png/detail/47-475361_facebook-flat-logo-twitter-flat-logo-instagram-flat.png" alt=""/>
+            </div>
+            <div>
+                <img src="https://icones.pro/wp-content/uploads/2021/03/icone-linkedin-ronde-violet.png" alt=""/>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ejlONkY_fnUvb_M1YoUTlJ1R2jW6C4D3ZpN6ImF5Zzgu2gF9J5NbSw-LYyy9y_333kM&usqp=CAU" alt=""/>
+            </div>
+            <div>
+                <img src="https://www.kindpng.com/picc/m/11-110438_transparent-facebook-icon-transparent-png-facebook-blue-cmyk.png" alt=""/>
+            </div>
+        </div>
+    </div>
+    <div id="footer3">
+        <div id="toop1">
+            <div>Job Seekers</div>
+            <div>Employers</div>
+            <div>Monster</div>
+            <div>Stay Connected</div>
+            <div>Legal</div>
+        </div>
+        <div id="bot">
+            <div>
+                <p>Job Search</p>
+                <p>Job Seekers Login</p>
+                <p>Upload Resume</p>
+                <p>Career Advice</p>
+                <p>Search Tips</p>
+                <p>Free Job Alert</p>
+                <p>Find Companies</p>
+                <p>Help</p>
+            </div>
+            <div>
+                <p>Employer Login</p>
+                <p>Job Posting</p>
+                <p>Access Resume Database</p>
+                <p>Join mRecruiters</p>
+                <p>Buy Online</p>
+            </div>
+            <div>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Career with us</p>
+                <p>Send Feedback</p>
+                <p>Testimonials</p>
+                <p>HTML Sitemap</p>
+                <p>XML Sitemap</p>
+                <p>Jobs App</p>
+            </div>
+            <div id="goo">
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Linkedin</p>
+                <p>Instagram</p>
+                <p>Youtube</p>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/public/default/images/android-footer.png" alt="" />
+                </div>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/public/default/images/ios-footer.png" alt="" />
+                </div>
+            </div>
+            <div>
+                <p>Security & Fraud</p>
+                <p>Privacy Policy</p>
+                <p>Terms of Use</p>
+                <p>Beware of Fraudsters</p>
+                <p>Be Safe</p>
+                <p>Complaints</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.querySelector("#btn").addEventListener("click",detail)
+
+    function detail(event){
+        event.preventDefault()
+        let mail = document.querySelector("#email").value;
+        let pass = document.querySelector("#password").value;
+
+        let obj={
+            mail,pass
+        }
+        if(obj.mail == "" || obj.pass==""){
+            alert("Some Fields are missing")
+        }else{
+            alert("Login Successfully")
+        }
+    }
+</script>
+</html>
