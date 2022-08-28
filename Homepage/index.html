@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        body button{
+            cursor: pointer;
+        }
+        #nav{
+            width: 100%;;
+            display: flex;
+            position: sticky;
+            top: 0px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            background-color:#f0f8ff;
+            height: 75px;
+            cursor: pointer;
+        }
+        #nav > div{
+            display: flex;
+            border: 0px solid blue;
+            margin: 20px;
+        }
+        #nav > div:nth-child(1){
+            flex-grow: 2;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #nav > div:nth-child(1) > div{
+            border: 0px solid yellow;     
+        }
+        #nav > div:nth-child(1) > div > img{
+            width : 135px; 
+        }
+        #nav > div:nth-child(2){
+            flex-grow: 1;
+            display: flex; 
+          justify-content: start;        
+        }
+        #nav > div:nth-child(2) > button{
+         margin-left: 10px;
+         background-color: white;
+         padding: 10px; 
+         border-radius: 5px;
+         border-width: 1px;
+         text-align: center;
+        }
+        #nav > div:nth-child(2) > button:hover{
+            background-color: rgb(255, 153, 0);
+            color: white;
+        }
+        #nav > div:nth-child(1)>div:nth-child(2):hover{
+            color: rgb(159, 12, 159);
+        }
+        #nav > div:nth-child(1)>div:nth-child(3):hover{
+            color: rgb(159, 12, 159);
+        }
+        #nav > div:nth-child(1)>div:nth-child(4):hover{
+            color: rgb(159, 12, 159);
+        }
+        #nav > div:nth-child(1)>div:nth-child(6):hover{
+            color: rgb(159, 12, 159);
+        }
+        #nav > div:nth-child(1)>div>button{
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px;
+            color: #F7821b;
+            background-color: rgb(248, 202, 159);
+        }
+        #nav > div:nth-child(1)>div>button:hover{
+            color: rgb(159, 12, 159);
+
+        }
+        #job{
+            width:100%;
+            /* border: 1px solid blue; */
+            height : 320px;
+            display: flex;
+            background-color: rgb(135, 235, 232);
+        }
+        #job > div{
+            width:80%;
+            margin: 5px;
+        }
+        #job
+        #job>div:nth-child(1){
+            display: flex;
+        }
+        #two{
+            display: flex;
+            margin: auto;
+            justify-content:flex-start;
+            align-items: center;
+        }
+        #two>div{
+            width : 85%;
+            height: 190px;
+            border: 0px solid blue;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap:10px;
+            padding: 20px;
+            background-color: rgba(32, 29, 29, 0.644);  
+            margin-top: 16px;   
+            border-radius: 7px;   
+        }
+        #two>div>div{
+            border:1px solid green;
+            text-align: center;  
+            background-color: white; 
+        }
+        #two > div>div:nth-child(1)>h5+h5{
+            color: #5D4DA8
+        }
+        #two > div>div:nth-child(1)>button{
+            padding: 12px 5px 10px;
+            margin-bottom: 10px;
+            background-color: #F5A623;
+            color: white;
+            border: 1px;
+            cursor: pointer;
+        }
+        #two > div>div:nth-child(1)>button:hover{
+            background-color: rgb(255, 128, 0);
+        }
+        #two > div>div:nth-child(2)>button{
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #5D4DA8;
+            color: #5D4DA8;
+            cursor: pointer;
+        }
+        #two > div>div:nth-child(2)>button:hover{
+            background-color:#5D4DA8;
+            color: white;
+        }
+        #job > div:nth-child(1) > div{
+            height:240px;
+            margin-top: -20px;
+            background-color: rgba(32, 29, 29, 0.644);
+            margin-left: 30px;
+            border-radius: 7px;
+        }
+        #job > div:nth-child(1) > div > div:nth-child(1){
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+        #box{
+            text-align: center;
+        }
+        #box > div{
+            /* border: 1px solid yellow; */
+            font-size: 17px;
+            color: white;
+            margin-top: 18px;
+        }
+        #box>div:nth-child(1):hover{
+            color:#a496e1;
+        }
+        #box>div:nth-child(2):hover{
+            color: #a496e1;
+        }
+        #box>div:nth-child(3):hover{
+            color: #a496e1;
+        }
+        #box>div:nth-child(4):hover{
+            color: #a496e1;
+        }
+        #box>div:nth-child(5):hover{
+            color: #a496e1;
+        }
+        #box+input{
+            width:80%;
+            padding: 10px;
+            margin-top: 30px;
+            margin-left: 18px;
+        }
+        #box+input+button{
+            width:12%;
+            padding: 14px;
+            background-color: #b3a9e2;
+            border: 1px;
+            color: white;
+        }
+        #box+input+button:hover{
+            background-color: #5D4DA8;
+        }
+        #job >div> h2{
+            color: white;
+            margin-left: 35px;
+        }
+        #job >div:nth-child(1)>div>div:nth-child(4){
+            display: flex;
+            justify-content: end;
+            color: white;
+            margin-right: 15px;
+        }
+        #job >div:nth-child(1)>div>div:nth-child(4)+div{
+            color: white;
+            font-size: 18px;
+            margin-left: 14px;
+
+        }
+        #emp{
+            width:90%;
+            border: 1px solid rgb(210, 199, 199);
+            margin: auto;
+            height:150px;
+            margin-left: 45px;
+            margin-top: 10px;
+           
+        }
+        #emp>div>h1{
+            font-size: 27px;
+            margin-top: 20px;
+            margin-left: 20px;
+           
+        }
+        #emp>div:nth-child(2){
+            display: grid;
+            grid-template-columns: repeat(9,1fr);
+            gap:10px;
+            margin-top: 20px;
+        }
+        #emp>div:nth-child(2)>div>img{
+            width:135px;
+        }
+     #emp>div:nth-child(2)>div>button{
+        padding: 17px;
+        border-radius: 50%;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-left: 20px;
+     }
+     #emp>div:nth-child(2)>div>button:hover{
+        font-size: 20px;
+     }
+     #emp>div:nth-child(2)>div:nth-child(9)>button{
+        margin-left: 40px;
+     }
+     #fraud{
+            width:90%;
+            border:0px solid red;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        #fraud>div{
+            border: 1px;
+            display: flex;
+            height: 150px;
+        }
+        #fraud>div:nth-child(1)>div>img{
+            width:250px;
+        }
+        #fraud>div:nth-child(1){
+            /* flex-grow: 2; */
+            width: 100%;
+            background-color: #f9e8b3;
+        }
+        #fraud>div:nth-child(2){
+            display: flex;
+            justify-content: flex-start;
+            /* margin-left: 40px; */
+            border: 1px;
+            background-color: rgb(237, 207, 150);
+        }
+        #fraud>div:nth-child(2)>div:nth-child(2){
+            width:60%;
+            text-align: center;
+        }
+        #fraud>div:nth-child(1)>div:nth-child(3){
+            display: flex;
+           padding: 20px;
+           align-items:flex-end;
+            border: 0px solid red;
+        }
+        #fraud>div:nth-child(1)>div>button{
+            padding: 10px;
+            margin-bottom: -20px;
+            width: 150px;
+            margin-right: -20px;
+            border-radius:10px;
+            border: 1px;
+            background-color: #b3a9e2;
+            color: white;
+            font-size: 18px;
+        }
+        #fraud>div:nth-child(1)>div>button:hover{
+            background-color: #5D4DA8
+        }
+        #fraud>div:nth-child(2)>div:nth-child(2)>div>p{
+            color: blue;
+        }
+        #wfh{
+            width:90%;
+            border:0px solid red;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+            margin-left: 40px;
+        }
+        #wfh>div:nth-child(1){
+            width: 100%;
+            background-color: white;
+            border: 1px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            /* margin-bottom: 20px; */
+        }
+        #wfh > div:nth-child(1)>div:nth-child(1){
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        #wfh > div:nth-child(1)>div:nth-child(1)>h4{
+            color:#5D4DA8
+        }
+        #wfh > div:nth-child(1)>div:nth-child(1)>h2{
+            margin-left: 20px;
+        }
+        #wfh > div:nth-child(1)>div:nth-child(2){
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            margin-top: -20px;
+        }
+        #wfh > div:nth-child(1)>div:nth-child(2)>div>button{
+            border: 0px solid orangered;
+            /* width:40%;  */
+            padding: 20px;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+        #wfh>div:nth-child(2){
+            border: 0px solid blue;
+            background-color:white;
+            width: 400px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        #wfh>div:nth-child(1)>div>button{
+            padding: 10px;
+            margin-bottom: -20px;
+            width: 150px;
+            margin-right: -20px;
+            border-radius:10px;
+            border: 1px;
+            background-color: #b3a9e2;
+            color: white;
+            font-size: 18px;
+        }
+        #wfh>div:nth-child(2)>div:nth-child(2)>div>p{
+            color: blue;
+
+        }
+        #boxes{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 30px;
+            text-align: center;
+        }
+        #boxes > div{
+            border: 1px;
+            margin: 10px;
+            width: 200px;
+            background-color: #F5F5F5;
+        }
+        #boxes+div{
+            display: flex;
+            align-items: center;
+        }
+        #wfh > div:nth-child(1)>div:nth-child(2)>div:nth-child(1){
+            display: flex;
+            align-items: center;
+        }
+        #first >#recent{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            gap: 20px;
+        }
+        #first > #recent>h4{
+            color:#5D4DA8
+        }
+        #first > #recent>h2{
+            margin-left: 20px;
+        }
+        #first > #recent+#btn{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            border: 0px solid blue;
+            margin-top: -20px;
+        }
+        #first>#btn{
+            border: 1px solid blue;
+            background-color:white;
+            width: 400px;
+        }
+        #boxe{
+            display: flex;
+            justify-content: space-evenly;
+            margin: 30px;
+            text-align: center;
+        }
+        #boxe > div{
+            border: 1px;
+            margin: 10px;
+            width: 200px;
+            background-color: #F5F5F5;
+        }
+        #first > #btn>div>button{
+            padding: 20px;
+            border-radius: 50%;
+            font-size: 20px;
+            border: 0px;
+        }
+        #first > #btn>div>button:hover{
+            font-size: 30px;
+        }
+        #first>#recent>div>button{
+            padding: 10px;
+            margin-bottom: -20px;
+            width: 150px;
+            margin-right: -20px;
+            border-radius:10px;
+            border: 1px;
+            background-color: #b3a9e2;
+            color: white;
+            font-size: 18px;
+        }
+        #boxe+div{
+            display: flex;
+            align-items: center;
+        }
+        #first > #recent+#btn>div:nth-child(1){
+
+            display: flex;
+            align-items: center;
+        }
+        #topSkill>div:nth-child(1){
+            margin-left: 20px;
+
+        }
+        #topSkill>.para{
+            margin-left: 20px;
+        }
+        #premi{
+            width:67%;
+            margin: auto;
+            gap: 20px;
+            margin-top: 10px;
+            margin-left: 40px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #premi>#top1{
+            width:90%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+        }#premi > #bottom{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            width: 96%;
+            margin: auto;
+        }
+        #bottom>div{
+            border: 0px solid yellow;
+            line-height: 15px;
+            height: 250px;
+            margin-bottom: 30px;
+            
+        }
+        #bottom>div>p{
+
+            margin-left: 10px;
+        }
+        #bottom>div>h4{
+            margin-left: 10px;
+        }
+
+        #bottom > div > div:nth-child(1){
+            border: 0px solid white;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #bottom > div:nth-child(1)> div>img{
+            margin: auto;
+            display: block;
+            width: 35%;
+            height: 120px;
+        }
+        #bottom > div:nth-child(2)> div>img{
+            margin: auto;
+            display: block;
+            width: 36%;
+            /* margin-top: 6px; */
+            height: 120px;
+        }
+        #bottom > div:nth-child(3)> div>img{
+            margin: auto;
+            display: block;
+            width: 25%;
+            height: 120px;
+        }
+        #bottom > div:nth-child(4)> div>img{
+            margin: auto;
+            display: block;
+            width: 42%;
+            height: 120px;
+        }
+        #bottom >div>.pa{
+            text-align:right;
+            color: #5D4DA8;
+        }
+        #bottom > div:nth-child(1){
+            background-color: #E4F0FF;
+        }
+        #bottom > div:nth-child(2){
+            background-color: #FFF8E9;
+        }
+        #bottom > div:nth-child(3){
+            background-color: #EFF8EC;
+        }
+        #bottom > div:nth-child(4){
+            background-color: #FFEDF5;
+        }
+        #top1>h4{
+            color: #5D4DA8;
+        } #top1 >h4:hover{
+            font-size: 20px;
+        }
+        #vacat{
+            width :67%;
+            border: 0px solid red;
+            margin-left: 40px;
+            margin-top: 20px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #box1{
+            width:90%;
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 10px;
+            margin: auto;
+            text-align: center;
+        }
+        #box1>div{
+            border: 0px solid blue;
+            padding: 7px;
+            font-weight: bold;
+        }
+        #box1>div:nth-child(1){
+            border: 0px solid violet;
+            background-color: #5d4da8;
+            color: white;
+            border-radius: 5px;
+        }
+        #box1>div:nth-child(2):hover{
+            text-decoration: underline;
+            font-size: 18px;
+            color: blueviolet;
+        }
+        #box1>div:nth-child(3):hover{
+            text-decoration: underline;
+            font-size: 18px;
+            color: blueviolet;
+        }
+        #box1>div:nth-child(4):hover{
+            text-decoration: underline;
+            font-size: 18px;
+            color: blueviolet;
+        }
+        #box1>div:nth-child(5):hover{
+            text-decoration: underline;
+            font-size: 18px;
+            color: blueviolet;
+        }
+        #box1>div:nth-child(6):hover{
+            text-decoration: underline;
+            font-size: 18px;
+            color: blueviolet;
+        }
+        #box1>div:nth-child(1):hover{
+            text-decoration: underline;
+            font-size: 18px;
+        }
+        #dit{
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+        #dit>div{
+            border: 0px solid red;
+            font-size: 18px;
+            margin-left: 10px;
+        }
+        #dit > div>p{
+            margin-left: 60px;
+        }
+        #detai{
+            width:95%;
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 40px;
+            color: #5d4da8;
+        }
+        #detai > p:hover{
+            font-size: 18px;
+            text-decoration: underline;
+
+        }
+        #vacat > div:nth-child(1){
+            margin-left: 30px;
+            padding: 10px;
+        }
+        #call{
+            width : 67.2%;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #7159DB;
+            color: white;
+            font-size: 18px;
+            margin-top: -40px;
+            margin-left: 39px;
+        }
+        #call>div:nth-child(2)>input{
+            padding: 20px;
+            width: 280px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        #call>div:nth-child(2)>button{
+            padding: 20px;
+            width:200px;
+            background-color: #F5A623;
+            border: none;
+           margin-left: -5px;
+           color: white;
+           font-size: 18px;
+        }
+        #call>div:nth-child(2)>button:hover{
+            background-color: rgb(255, 128, 0)
+        }
+        #resc{
+            width : 67%;
+            border:0px solid red;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            height:300px;
+            margin-left: 39px;
+            margin-top: 15px;
+        }
+        #index>.pop{
+            width: 80%;
+            display: flex;
+            margin-left: 20px;       
+        }
+        .pop>div{
+            border: 0px solid blue;
+        }
+        .pop>div>img{
+            width:35px;
+            margin-top: 16px;
+          
+        }
+       .pop>div:nth-child(2){
+        display: flex;
+        align-items:baseline;
+        margin-left: 10px;
+       }
+       #index{
+        border: 1px;
+        background-color: #f5f5f5;
+        width:95%;
+        margin: auto;
+       }
+       #index> .cli{
+        width:90%;
+        display: flex;
+        justify-content: end;
+        color: #5d4da8;
+        font-size: 20px;
+        margin-left: 60px;
+       }
+       #index> .cli:hover{
+        text-decoration: underline;
+       }
+       #index > #mon{
+        width:90%;
+        font-size: 20px;
+        margin-left: 15px;
+        margin-top: -20px;
+       }
+       #resc > div:nth-child(1){
+        margin-left: 20px;
+        padding: 5px;
+       }
+       #footer1{
+            width:100%;
+            background-color: #f5f5f5;
+            margin: auto;
+        }
+        .one{
+            width:90%;
+            display: flex;
+            margin-left: 50px;
+        }
+        .head{
+            width:28%;
+            line-height: 30px;
+            color: #5d4da8;
+        }
+        .bod{
+            line-height: 30px;
+        }
+        .head1{
+            width:11%;
+            color: #5d4da8;
+            line-height: 30px;
+
+        }
+        .head2{
+            width:13%;
+            color: #5d4da8;
+            line-height: 30px;
+
+        }
+        .head3{
+            width:15%;
+            color: #5d4da8;
+            line-height: 30px;
+
+        }
+        .head4{
+            width:10%;
+            color: #5d4da8;
+            line-height: 30px;
+        }
+        .bod >:hover{
+            color: #5d4da8;
+        }
+        #footer2{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #f5f5f5;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        #footer2>div:nth-child(1){
+            display: flex;
+            align-items: center;
+        }
+        #clogo{
+            display: flex;
+            align-items: center;
+        }
+        #clogo > div>img{
+            width : 50px;
+        }
+        #clogo>div:nth-child(2){
+            margin-left: 10px;
+        }
+        #clogo>div:nth-child(2):hover{
+            color: #5D4DA8;
+        }
+        #mailLogo{
+            display: flex;
+            align-items: center;
+        }
+        #mailLogo > div > img{
+            width : 30px;
+        }
+        #mailLogo>div:nth-child(2){
+            margin-left: 15px;
+            font-size: 20px;
+            margin-top:-10px;
+        }
+        #mailLogo>div:nth-child(2):hover{
+            color: #5D4DA8;
+            text-decoration: underline;
+        }
+        #logo1{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #logo1 > div{
+            border: 0px solid greenyellow;
+            margin: auto;
+        }
+        #logo1 > div > img{
+            width : 40px;
+            display: block;
+            margin: 20px;
+        }
+        #footer2 > div > input{
+            font-size: 20px;
+        }
+        #footer3{
+            width:100%;
+            background-color: #5D4DA8;
+            color: white;
+        }
+        #toop1{
+            width:85%;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 22px;
+            margin: auto;
+            padding-top: 20px;
+        }
+        #bot{
+            width :85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            padding-bottom: 30px;        
+        }
+        #bot > div{
+            text-align: start;
+            font-size: 16px;
+        }
+        #bot>div:nth-child(1){
+            margin-left: 40px;
+        }
+        #bot>div:nth-child(3){
+            margin-left: -18px;
+        }
+        #bot>div:nth-child(5){
+          text-align: center;
+        }
+      #bot>#goo>div>img{
+            display: block;
+            padding-bottom: 10px;
+        }
+        #righT{
+       margin-left: 200px;
+       font-size: 18px;
+        } 
+        #nav a{
+            text-decoration: none;
+            /* list-style: none; */
+        }         
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg" alt=""/>
+            </div>
+            <div><a href="jobsearch.html">JOB SEARCH</a></div>
+            <div>WORK FROM HOME</div>
+            <div>CAREER TIPS</div>
+            <div>
+                <button>PRIMIUM SERVICE</button>
+            </div>
+            <div>MORE</div>
+        </div>
+        <div>
+            <button><a href="login.html">JOB SEEKER LOGIN</a></button>
+            <button>FOR EMPLOYERS</button>
+        </div>
+    </div>
+    <div id="job">
+        <div>
+            <h2>500,000+Jobs.Find Better.Faster</h2>
+            <div>
+                <div id="box">
+                    <div>ADD jobs</div>
+                    <div>Work From Home</div>
+                    <div>TRIUMPH JOBS</div>
+                    <div>Contract Jobs</div>
+                    <div>Fresher Jobs</div>
+                </div>
+                <input type="text" placeholder="Search by Skills,Company & Job title"/>
+                <button>Search</button>
+                <div clss="pot">
+                    <p>Advanced Search</p>
+                </div>
+                <div>
+                    <p>
+                        Treading Searches : Jobs in Delhi, Jobs in Mumbai, Jobs in Hyderabad, Jobs in Bangalore, Jobs in
+                                            Chennai, Jobs in Pune, Jobs in Kolkata, Jobs in Lucknow
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="two">
+            <div>
+                <div>
+                    <h5>NEW TO MONSTER?</h5>
+                    <h5>REGISTER WITH US</h5>
+                    <P>Or</P>
+                    <button id="buttonn">
+                        UPLOAD RESUME<br>
+                        We will create your profile
+                    </button>
+                </div>
+                <div>
+                    <h5>FREE JOB ALERT</h5>
+                    <p>Get an email on<br>
+                        jobs matching your criteria</p>
+                    <p>No registration required</p>
+                    <button>CREATE JOB ALERT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="emp">
+        <div>
+            <h1>Employers of Choice</h1>
+        </div>
+        <div>
+            <div>
+                <button class="pen"><</button>
+            </div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2021/june/ZnNwNuQzQu0ja8wsf8vGg4ajsi5RRpd7vlOX71RC.jpeg" alt=""/>
+            </div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2022/april/3u92a6TD7MslWbPJic4wSzABsLPBwtL0mrthYvxW.jpeg" alt=""/>
+            </div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2022/january/Vt3mzVSvBb6NkFhELbk0NzIv3sSmcRm9LFUGC4rG.jpeg" alt=""/>
+            </div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2022/august/nGqLoPmZun0GxVuKOgaEBB7Q63BGdyOPqHxRpTCl.jpeg" alt=""/>
+            </div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2022/april/Mp2fRLKl9YmxG7YBxanGbRYdkzMayIcwhiEe8HyD.jpeg" alt=""/>
+            </div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2021/october/S75zzSg0xsbyLirgPUWCqPUuUT9LpsXVQp6uLb7B.jpeg" alt=""/>
+            </div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/prod-cdn/media/promotedemployer/2021/november/aGHVfuwztrBLUqQ4hUb3uhV1zgbGZTf9VaoKyRkm.jpeg" alt=""/>
+            </div>
+            <div>
+                <button>></button>
+            </div>
+        </div>
+    </div>
+    <div id="fraud">
+        <div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/public/default/images/cs-banner-budge-1.png" alt=""/>
+            </div>
+            <div>
+                <h3> What it feels like to have 48% more interview calls?</h3>
+                <p>To get 5x more recruiter views on your profile</p>
+            </div>
+            <div>
+                <button>Ask Here</button>
+            </div>
+        </div>
+        <div>
+            <div>
+                <img src="https://media.monsterindia.com/trex/public/default/images/beware-icon.png" alt=""/>
+            </div>
+            <div class="para">
+                <h4>Beware of fraud</h4>
+                <p>Monster or it's partners do not charge any money from job seekers for job offers.</p>
+                <div>
+                    <p>Know More</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="wfh">
+        <div id="first">
+            <div>
+                <h2>Work From Home Jobs</h2>
+                <h4>View all ></h4>
+            </div>
+            <div id="new">
+                <div>
+                    <button><</button>
+                </div>
+                <div id="boxes">
+                    <div>
+                        <h4>Mount Solution</h4>
+                        <p>IT Analyst</p>
+                        <p>Experience:0 - 2 years</p>
+                        <p>Location(s):Panipath</p>
+                    </div>
+                    <div>
+                        <h4>V-HR Designers Consulting</h4>
+                        <p>Telecaller or customer Service</p>
+                        <p>Experience:0 - 3 years</p>
+                        <p>Location(s):Hydrabad/<br>Telengana</p>
+                    </div>
+                    <div>
+                        <h4>IT Skill Solutions</h4>
+                        <p>Technical Coding Job</p>
+                        <p>Experience:0 - 3 years</p>
+                        <p>Location(s):Chennai,<br>Coimbatore</p>
+                    </div>
+                </div>
+                <div>
+                    <button>></button>
+                </div>
+            </div>
+            <div id="recent">
+                <h2>Recent Jobs</h2>
+                <h4>View all ></h4>
+            </div>
+            <div id="btn">
+                <div>
+                    <button><</button>
+                </div>
+                <div id="boxe">
+                    <div>
+                        <h4>Corner Tree Consulting</h4>
+                        <p>IT Analyst</p>
+                        <p>Experience:3 - 5 years</p>
+                        <p>Location(s):Bangalore</p>
+                    </div>
+                    <div>
+                        <h4>Talenton Technology Server</h4>
+                        <p>Android Platform Developer</p>
+                        <p>Experience:2 - 4 years</p>
+                        <p>Location(s):Bangalore</p>
+                    </div>
+                    <div>
+                        <h4>Edu Vantage Private Limited</h4>
+                        <p>Education Tech Sales</p>
+                        <p>Experience: 2 - 8 years</p>
+                        <p>Location(s):Bangalore</p>
+                    </div>
+                </div>
+                <div>
+                    <button>></button>
+                </div>
+            </div>
+        </div>
+        <div id="topSkill">
+            <div>
+                <h2>Jobs by Top Skills</h2><hr>
+            </div>
+            <div class="para">
+                <p>Accounting Jobs</p>
+                <p>Analytics Jobs</p>
+                <p>Animation Jobs</p>
+                <p>Architecture Jobs</p>
+                <p>Banking Jobs</p>
+                <p>BPO Jobs</p>
+                <p>Data Science Jobs</p>
+                <p>Java Jobs</p>
+                <p>Marketing Jobs</p>
+                <p>Mechanical Engineering Jobs</p>
+                <p>Networking Jobs</p>
+                <p>Online Marketing Jobs</p>
+                <p>SEO Jobs</p>
+                <p>Teaching Jobs</p>
+                <p>UX/UI Jobs</p>
+            </div>
+        </div>
+    </div>
+    <div id="premi">
+        <div id="top1">
+            <h2>Premium Services</h2>
+            <h4>View All ></h4>
+        </div>
+        <div id="bottom">
+            <div>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/prod-cdn/media/product/2021/august/Xra3gEbEDCZChclt6KyeY08aT14mQIemY87tp56k.png" alt=""/>
+                </div>
+                <h4>Featured Profile</h4>
+                <p>Better your chances of getting shortlisted</p>
+                <div class="pa">
+                    <p> Read More</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/prod-cdn/media/product/2021/august/K109Ubc6KIVisXQSRJaQhTSXJpOAkU0UUA2dpe7R.png" alt=""/>
+                </div>
+                <h4>Profile Highlighter</h4>
+                <p>Grab the attention of employers</p>
+                <div class="pa">
+                    <p> Read More</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/prod-cdn/media/product/2021/august/aJ98j6upmWI4DEMecdM4NTPzesMybGMNVQBA3Xod.png" alt=""/>
+                </div>
+                <h4>Resume Writing</h4>
+                <p>Professionally written resume + cover letter</p>
+                <div class="pa">
+                    <p> Read More</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/prod-cdn/media/product/2021/august/UWwaneAf2OBhqcauh7PujGU5mIavChpFlRnZabZp.png" alt=""/>
+                </div>
+                <h4>Career Booster</h4>
+                <p>Get the power of two in one and speed up your job search</p>
+                <div class="pa">
+                    <p> Read More</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="vacat">
+        <div>
+            <h2>Find Job Vacancies by</h2>
+        </div>
+        <div id="box1">
+            <div>Skills</div>
+            <div>Location</div>
+            <div>Industry</div>
+            <div>Functions</div>
+            <div>Roles</div>
+            <div>Company</div>
+        </div>
+        <div id="dit">
+            <div>
+                <p>Sales</p>
+                <p>Java</p>
+                <p>Jio Customer Associate- <br>
+                Freelancer JP</p>
+                <p>Software Eng</p>
+                <p>Operations</p>
+            </div>
+            <div>
+                <p>Sql</p>
+                <p>Javascript</p>
+                <p>Phython</p>
+                <p>Customer Support</p>
+                <p>Customer Service</p>
+            </div>
+            <div>
+                <p>Good Communication</p>
+                <p>HTML</p>
+                <p>Marketing</p>
+                <p>CSS</p>
+                <p>Voice Process</p>
+            </div>
+            <div>
+                <p>Lead Generation</p>
+                <p>Problem Solver</p>
+                <p>BPO</p>
+                <p>C#</p>
+                <p>AWS</p>
+            </div>
+        </div>
+        <div id="detai">
+            <p>Brows All Job Skills ></p>
+        </div>
+    </div>
+    <div id="call">
+        <div>
+            <p>Find Better & Faster with Monster Career Services</p>
+            <p>Call 1-800-4196666 now! (Toll-free)</p>
+        </div>
+        <div>
+            <input type="text" placeholder="Enter Your mobile Number" id="phn"/>
+            <button>Get a Call Back</button>
+        </div>
+    </div>
+    <div id="resc">
+        <div>
+            <h2>Monster Research and Reports</h2>
+        </div>
+        <div id="index">
+            <div class="pop">
+                <div>
+                    <img src="https://www.stc.com.sa/content/dam/stc/stc-annual-report-2020/images/ar/stc/increase.png" alt=""/>
+                </div>
+                <div>
+                    <h2>Monster Employment Index</h2>
+                </div>
+            </div>
+            <div id="mon">
+                <p>The Monster Employment Index is a broad and comprehensive monthly analysis of online job posting activity conducted by Monster India.</p>
+            </div>
+            <div class="cli">
+                <p>Learn More</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer1">
+        <div class="one">
+            <div class="head">
+                <p>Jobs by Locations</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Jobs in Bangalore | Jobs in Delhi | Jobs in Mumbai | Jobs in Chennai | Jobs in Hyderabad | Jobs in Kolkata | Jobs in Pune | Jobs in Chandigarh | Jobs in Lucknow | Jobs in Coimbatore | Jobs in Odisha | Jobs in Jaipur | Jobs in Ahmedabad | Jobs in Indore | Jobs in Nagpur | Jobs in Goa | Jobs in Noida | Jobs in Bhubaneswar | Jobs in Gurgaon | Jobs in Guwahati | Jobs in Dehradun | Jobs in Mysore | Jobs in Bhopal | Jobs in Vijayawada</p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head1">
+                <p>Jobs by Skill-IT</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Biotechnical Jobs | Digital Marketing Jobs | Graphic Design Jobs | Networking Jobs | Oracle Jobs | SEO Jobs | Software Testing Jobs | Sql Jobs | Web Design Jobs </p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head2">
+                <p>Jobs by Skill-Non IT</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Accounting Jobs | BPO Jobs | Call Center Jobs | Civil Engineering Jobs | Content Writting Jobs | Electrical Engineering Jobs |Event Management Jobs | Hotel Management Jobs | HR Jobs | Sales Jobs </p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head3">
+                <p>Jobs by Role</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Air Hostess Jobs | Accountant Jobs | Assistant Professor Jobs | Business Analyst Jobs | Computer Operator jobs | Data Analyst Jobs | Data Entry Operator Jobs | Fashion Designer Jobs | Graphics Designer jobs | Software Engineer Jobs</p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head1">
+                <p>International Jobs</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Jobs in Gulf | Jobs in Singapore | Jobs in Malaysia | Jobs in Philippines | Jobs in Hong Kong | Jobs in Vietnam | Jobs in Indonesia | Jobs in Thailand | Jobs in Dubai | Jobs in UAE</p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head4">
+                <p>Other Jobs</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Walk-in Jobs | Part Time Jobs | Contract Jobs | Jobs for Women | Fresher Jobs | Freelancer Jobs | Work from Home Jobs | 12th Pass Jobs | 10th Pass Jobs | Diploma Jobs</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer2">
+        <div>
+            <input type="text" placeholder="India"/>
+        </div>
+        <div id="clogo">
+            <div>
+                <img src="https://library.kissclipart.com/20180830/sqe/kissclipart-cell-phone-logo-transparent-clipart-telephone-call-04c36f52ead4bd3a.jpg" alt=""/>
+            </div>
+            <div>
+                <p>Toll No: +91-40-66116611<br>
+                    Toll Free No: 1-800-4196666</p>
+            </div>
+        </div>
+        <div id="mailLogo">
+             <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtyQ1Kdo8WNNJSho1NhEoawqJt6Dv_gP1XVL5NTiX42fbBlx02NPd73eJFuLHIAaAvTOQ&usqp=CAU" alt=""/>
+            </div>
+            <div>
+                <p>info@monsterindia.com</p>
+            </div>
+        </div>
+        <div id="logo1">
+            <div>
+                <img src="https://www.seekpng.com/png/detail/47-475361_facebook-flat-logo-twitter-flat-logo-instagram-flat.png" alt=""/>
+            </div>
+            <div>
+                <img src="https://icones.pro/wp-content/uploads/2021/03/icone-linkedin-ronde-violet.png" alt=""/>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ejlONkY_fnUvb_M1YoUTlJ1R2jW6C4D3ZpN6ImF5Zzgu2gF9J5NbSw-LYyy9y_333kM&usqp=CAU" alt=""/>
+            </div>
+            <div>
+                <img src="https://www.kindpng.com/picc/m/11-110438_transparent-facebook-icon-transparent-png-facebook-blue-cmyk.png" alt=""/>
+            </div>
+        </div>
+    </div>
+    <div id="footer3">
+        <div id="toop1">
+            <div>Job Seekers</div>
+            <div>Employers</div>
+            <div>Monster</div>
+            <div>Stay Connected</div>
+            <div>Legal</div>
+        </div>
+        <div id="bot">
+            <div>
+                <p>Job Search</p>
+                <p>Job Seekers Login</p>
+                <p>Upload Resume</p>
+                <p>Career Advice</p>
+                <p>Search Tips</p>
+                <p>Free Job Alert</p>
+                <p>Find Companies</p>
+                <p>Help</p>
+            </div>
+            <div>
+                <p>Employer Login</p>
+                <p>Job Posting</p>
+                <p>Access Resume Database</p>
+                <p>Join mRecruiters</p>
+                <p>Buy Online</p>
+            </div>
+            <div>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Career with us</p>
+                <p>Send Feedback</p>
+                <p>Testimonials</p>
+                <p>HTML Sitemap</p>
+                <p>XML Sitemap</p>
+                <p>Jobs App</p>
+            </div>
+            <div id="goo">
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Linkedin</p>
+                <p>Instagram</p>
+                <p>Youtube</p>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/public/default/images/android-footer.png" alt=""/>
+                </div>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/public/default/images/ios-footer.png" alt=""/>
+                </div>     
+            </div>
+            <div>
+                <p>Security & Fraud</p>
+                <p>Privacy Policy</p>
+                <p>Terms of Use</p>
+                <p>Beware of Fraudsters</p>
+                <p>Be Safe</p>
+                <p>Complaints</p>
+            </div>
+        </div>
+    </div>
+    <div id="righT">
+        <p>© 2021 Monster - All Rights Reserved</p>
+    </div>          
+</body>
+<script>
+    document.getElementById("buttonn").addEventListener("click",function(){
+        alert("UPLOAD YOUR RESUME")
+    })
+</script>
+</html>

@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Search</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            cursor: pointer;
+            background-color: #f5f5f5;
+        }
+
+        body button {
+            cursor: pointer;
+        }
+
+        #nav {
+            width: 100%;
+            ;
+            display: flex;
+            position: sticky;
+            top: 0px;
+            box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+            background-color: #f0f8ff;
+            height: 75px;
+        }
+
+        #nav>div {
+            display: flex;
+            border: 0px solid blue;
+            margin: 20px;
+        }
+
+        #nav>div:nth-child(1) {
+            flex-grow: 2;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #nav>div:nth-child(1)>div>img {
+            width: 135px;
+        }
+        #nav>div:nth-child(2) {
+            flex-grow: 1;
+            display: flex;
+            justify-content: start;
+        }
+        #nav>div:nth-child(2)>button {
+            margin-left: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            border-width: 1px;
+            text-align: center;
+        }
+
+        #nav>div:nth-child(2)>button:hover {
+            background-color: rgb(255, 153, 0);
+            color: white;
+        }
+
+        #nav>div:nth-child(1)>div:nth-child(2):hover {
+            color: rgb(159, 12, 159);
+        }
+
+        #nav>div:nth-child(1)>div:nth-child(3):hover {
+            color: rgb(159, 12, 159);
+        }
+
+        #nav>div:nth-child(1)>div:nth-child(4):hover {
+            color: rgb(159, 12, 159);
+        }
+
+        #nav>div:nth-child(1)>div:nth-child(6):hover {
+            color: rgb(159, 12, 159);
+        }
+
+        #nav>div:nth-child(1)>div>button {
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px;
+            color: #F7821b;
+            background-color: rgb(248, 202, 159);
+        }
+
+        #nav>div:nth-child(1)>div>button:hover {
+            color: rgb(159, 12, 159);
+
+        }
+
+        #maain {
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #advanceForm>div {
+            margin-left: 180px;
+        }
+
+        #form {
+            width: 600px;
+            border: 1px solid rgb(230, 230, 230);
+            margin: 3% auto;
+            padding: 4%;
+            background: white;
+            cursor: pointer;
+        }
+
+        option {
+            font-size: 18px;
+        }
+
+        input,
+        select {
+            margin: 10px 0px;
+            font-size: 15px;
+            padding: 2%;
+        }
+
+        input,
+        #name {
+            width: 90%;
+            font-size: 15px;
+        }
+
+        input,
+        #exp {
+            width: 45%;
+        }
+
+        input,
+        #location {
+            width: 40%;
+            font-size: 15px;
+        }
+
+        input,
+        #industry {
+            width: 90%;
+            font-size: 15px;
+        }
+
+        input,
+        #function {
+            width: 90%;
+            font-size: 15px;
+        }
+
+        input,
+        #role {
+            width: 95%;
+            font-size: 15px;
+        }
+
+        input,
+        #minSalary {
+            width: 30%;
+            font-size: 15px;
+        }
+
+        input,
+        #manSalary {
+            width: 30%;
+            font-size: 15px;
+        }
+
+        #submit {
+            width: 95%;
+            margin: auto;
+            background-color: #5D4DA8;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #parr {
+            display: flex;
+            justify-content: flex-start;
+            padding-left: 10px;
+            margin-top: -20px;
+        }
+
+        #parr>div:nth-child(1) {
+            width: 48%;
+            margin-top: 20px;
+        }
+
+        #parr>div>img {
+            width: 100%;
+        }
+
+        #side {
+            width: 20%;
+            font-size: 18px;
+            height: 250px;
+            margin-top: 65px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+
+        #side>h3 {
+            color: #5D4DA8;
+            padding-left: 10px;
+        }
+
+        #parr>div:nth-child(2) {
+            font-size: 18px;
+            margin-left: 14px;
+        }
+
+        #parr>div:nth-child(2)>h4 {
+            color: blue;
+        }
+
+        #parr>div:nth-child(2)>p {
+            margin-top: -15px;
+        }
+
+        #maain+div {
+            width: 30%;
+            margin-left: 250px;
+        }
+
+        #footer1 {
+            width: 100%;
+            background-color: #f5f5f5;
+            margin: auto;
+        }
+
+        .one {
+            width: 90%;
+            display: flex;
+            margin-left: 50px;
+        }
+
+        .head {
+            width: 28%;
+            line-height: 30px;
+            color: #5d4da8;
+        }
+
+        .bod {
+            line-height: 30px;
+        }
+
+        .head1 {
+            width: 11%;
+            color: #5d4da8;
+            line-height: 30px;
+        }
+
+        .head2 {
+            width: 13%;
+            color: #5d4da8;
+            line-height: 30px;
+
+        }
+
+        .head3 {
+            width: 15%;
+            color: #5d4da8;
+            line-height: 30px;
+
+        }
+
+        .head4 {
+            width: 10%;
+            color: #5d4da8;
+            line-height: 30px;
+        }
+
+        .bod>:hover {
+            color: #5d4da8;
+        }
+
+        #footer2 {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #f5f5f5;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        #footer2>div:nth-child(1) {
+            display: flex;
+            align-items: center;
+        }
+
+        #footer2>div:nth-child(1)>input {
+            width: 200px;
+        }
+
+        #clogo {
+            display: flex;
+            align-items: center;
+        }
+
+        #clogo>div>img {
+            width: 50px;
+        }
+
+        #clogo>div:nth-child(2) {
+            margin-left: 10px;
+        }
+
+        #clogo>div:nth-child(2):hover {
+            color: #5D4DA8;
+        }
+
+        #mailLogo {
+            display: flex;
+            align-items: center;
+        }
+
+        #mailLogo>div>img {
+            width: 30px;
+        }
+
+        #mailLogo>div:nth-child(2) {
+            margin-left: 15px;
+            font-size: 20px;
+            margin-top: -10px;
+        }
+
+        #mailLogo>div:nth-child(2):hover {
+            color: #5D4DA8;
+            text-decoration: underline;
+        }
+
+        #logo1 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #logo1>div {
+            border: 0px solid greenyellow;
+            margin: auto;
+        }
+        #logo1>div>img {
+            width: 40px;
+            display: block;
+            margin: 20px;
+        }
+        #footer2>div>input {
+            font-size: 20px;
+        }
+        #footer3 {
+            width: 100%;
+            background-color: #5D4DA8;
+            color: white;
+        }
+        #toop1 {
+            width: 85%;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 22px;
+            margin: auto;
+            padding-top: 20px;
+        }
+        #bot {
+            width: 85%;
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            padding-bottom: 30px;
+        }
+        #bot>div {
+            text-align: start;
+            font-size: 16px;
+        }
+        #bot>div:nth-child(1) {
+            margin-left: 40px;
+        }
+
+        #bot>div:nth-child(3) {
+            margin-left: -18px;
+        }
+        #bot>div:nth-child(5) {
+            text-align: center;
+        }
+        #bot>#goo>div>img {
+            display: block;
+            padding-bottom: 10px;
+        }
+        #righT {
+            margin-left: 200px;
+            font-size: 18px;
+        }
+        #linkk a{
+            text-decoration: none;
+            /* list-style: none; */
+        }    
+    </style>
+
+</head>
+
+<body>
+    <div id="nav">
+        <div>
+            <div><a href="index.html"><img src="https://media.monsterindia.com/trex/public/default/images/monster-logo.svg" alt="" /></a></div>
+            <div>JOB SEARCH</div>
+            <div>WORK FROM HOME</div>
+            <div>CAREER TIPS</div>
+            <div>
+                <button>PRIMIUM SERVICE</button>
+            </div>
+            <div>MORE</div>
+        </div>
+        <div>
+            <button>JOB SEEKER LOGIN</button>
+            <button>FOR EMPLOYERS</button>
+        </div>
+    </div>
+    <div id="maain">
+        <div id="advanceForm">
+            <div>
+                <h2>Advance Job Search</h2>
+            </div>
+            <div id="fm">
+                <form id="form">
+                    <input type="text" placeholder="Name" id="name" /><br>
+                    <input type="text" placeholder="Experience" id="exp" />
+                    <input type="text" placeholder="Location" id="location" /><br>
+                    <input type="text" placeholder="Industry" id="industry" /><br>
+                    <input type="text" placeholder="Function" id="function" /><br>
+                    <select name="role" id="role">
+                        <option value="Role">Role</option>
+                        <option value="AC Technician">AC Technician</option>
+                        <option value="Accessory Designer">Accessory Designer</option>
+                        <option value="Account Manager">Account Manager</option>
+                        <option value="Account Planning">Account Planning</option>
+                        <option value="Account Servicing">Account Servicing</option>
+                        <option value="Accountant">Accountant</option>
+                        <option value="Accounts Manager">Accounts Manager</option>
+                        <option value="Advisor">Advisor</option>
+                        <option value="Architect">Architect</option>
+                        <option value="Artist">Artist</option>
+                        <option value="Backend">Backend</option>
+                        <option value="Beautician">Beautician</option>
+                        <option value="Biologist">Biologist</option>
+                        <option value="Branch Head">Branch Head</option>
+                        <option value="Branch Mananger">Branch Mananger</option>
+                        <option value="Bussiness Writter">Bussiness Writter</option>
+                        <option value="Butler">Butler</option>
+                        <option value="Buyer">Buyer</option>
+                        <option value="Bussiness Writter">Bussiness Writter</option>
+                        <option value="Cashier">Cashier</option>
+                        <option value="CEO/MD">CEO/MD</option>
+                        <option value="Chemist">Chemist</option>
+                        <option value="Chief Engineer">Chief Engineer</option>
+                        <option value="Delhivery Manager">Delhivery Manager</option>
+                        <option value="Dentist">Dentist</option>
+                        <option value="Dermatologist">Dermatologist</option>
+                        <option value="Design Engineer">Design Engineer</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Economist">Economist</option>
+                        <option value="Electrical Engineer">Electrical Engineer</option>
+                        <option value="Entrepreneur">Entrepreneur</option>
+                        <option value="Enviriment Engineer">Enviriment Engineer</option>
+                        <option value="External Consultant">External Consultant</option>
+                        <option value="Fashion Designer">Fashion Designer</option>
+                        <option value="Field Engineer">Field Engineer</option>
+                        <option value="Foreman">Foreman</option>
+                        <option value="Front Desk">Front Desk</option>
+                        <option value="Frontend">Frontend</option>
+                        <option value="GM">GM</option>
+                        <option value="Geoscientist">Geoscientist</option>
+                        <option value="Graphic Designer/Animation">Graphic Designer/Animation</option>
+                        <option value="Ground Staff">Ground Staff</option>
+                        <option value="Hardware Digner">Hardware Digner</option>
+                        <option value="House Keeping">House Keeping</option>
+                        <option value="HR Manager">HR Manager</option>
+                        <option value="Inspection Engineer">Inspection Engineer</option>
+                        <option value="Interior Desiner">Interior Desiner</option>
+                        <option value="Internal Auditor">Internal Auditor</option>
+                        <option value="Lab Technician">Lab Technician</option>
+                        <option value="Legal Advisor">Legal Advisor</option>
+                        <option value="Law Officer">Law Officer</option>
+                        <option value="Legal Manager">Legal Manager</option>
+                        <option value="Web Developer">Web Developer</option>
+                    </select><br>
+                    <input type="number" placeholder="Minimum Salary" id="minSalary" />
+                    <input type="number" placeholder="Maximum Salary" id="maxSalary" /><br>
+                    <input type="submit" value="Submit" id="submit" />
+                    <!-- <p><a href="jobDetail.html">Search</a></p> -->
+                </form>
+            </div>
+        </div>
+        <div id="side">
+            <h3>Search Tips</h3>
+            <div id="parr">
+                <div>
+                    <img src="https://cdn-icons-png.flaticon.com/512/1559/1559791.png" alt="" />
+                </div>
+                <div>
+                    <h4>Exact Job Search</h4>
+                    <p>Looking for an keyword search?
+                        Put double quotes around the "keyword" to search for exact word/phrases.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="linkk"><a href="jobDetail.html">Home / Job Details</a></div>
+    <div id="footer1">
+        <div class="one">
+            <div class="head">
+                <p>Jobs by Locations</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Jobs in Bangalore | Jobs in Delhi | Jobs in Mumbai | Jobs in Chennai | Jobs in Hyderabad | Jobs in
+                    Kolkata | Jobs in Pune | Jobs in Chandigarh | Jobs in Lucknow | Jobs in Coimbatore | Jobs in Odisha
+                    | Jobs in Jaipur | Jobs in Ahmedabad | Jobs in Indore | Jobs in Nagpur | Jobs in Goa | Jobs in Noida
+                    | Jobs in Bhubaneswar | Jobs in Gurgaon | Jobs in Guwahati | Jobs in Dehradun | Jobs in Mysore |
+                    Jobs in Bhopal | Jobs in Vijayawada</p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head1">
+                <p>Jobs by Skill-IT</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Biotechnical Jobs | Digital Marketing Jobs | Graphic Design Jobs | Networking Jobs | Oracle Jobs |
+                    SEO Jobs | Software Testing Jobs | Sql Jobs | Web Design Jobs </p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head2">
+                <p>Jobs by Skill-Non IT</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Accounting Jobs | BPO Jobs | Call Center Jobs | Civil Engineering Jobs | Content Writting Jobs |
+                    Electrical Engineering Jobs |Event Management Jobs | Hotel Management Jobs | HR Jobs | Sales Jobs
+                </p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head3">
+                <p>Jobs by Role</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Air Hostess Jobs | Accountant Jobs | Assistant Professor Jobs | Business Analyst Jobs | Computer
+                    Operator jobs | Data Analyst Jobs | Data Entry Operator Jobs | Fashion Designer Jobs | Graphics
+                    Designer jobs | Software Engineer Jobs</p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head1">
+                <p>International Jobs</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Jobs in Gulf | Jobs in Singapore | Jobs in Malaysia | Jobs in Philippines | Jobs in Hong Kong |
+                    Jobs in Vietnam | Jobs in Indonesia | Jobs in Thailand | Jobs in Dubai | Jobs in UAE</p>
+            </div>
+        </div>
+        <div class="one">
+            <div class="head4">
+                <p>Other Jobs</p>
+            </div>
+            <div class="bod">
+                <p>
+                    :Walk-in Jobs | Part Time Jobs | Contract Jobs | Jobs for Women | Fresher Jobs | Freelancer Jobs |
+                    Work from Home Jobs | 12th Pass Jobs | 10th Pass Jobs | Diploma Jobs</p>
+            </div>
+        </div>
+    </div>
+    <div id="footer2">
+        <div>
+            <input type="text" placeholder="India" />
+        </div>
+        <div id="clogo">
+            <div>
+                <img src="https://library.kissclipart.com/20180830/sqe/kissclipart-cell-phone-logo-transparent-clipart-telephone-call-04c36f52ead4bd3a.jpg"
+                    alt="" />
+            </div>
+            <div>
+                <p>Toll No: +91-40-66116611<br>
+                    Toll Free No: 1-800-4196666</p>
+            </div>
+        </div>
+        <div id="mailLogo">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtyQ1Kdo8WNNJSho1NhEoawqJt6Dv_gP1XVL5NTiX42fbBlx02NPd73eJFuLHIAaAvTOQ&usqp=CAU"
+                    alt="" />
+            </div>
+            <div>
+                <p>info@monsterindia.com</p>
+            </div>
+        </div>
+        <div id="logo1">
+            <div>
+                <img src="https://www.seekpng.com/png/detail/47-475361_facebook-flat-logo-twitter-flat-logo-instagram-flat.png"
+                    alt="" />
+            </div>
+            <div>
+                <img src="https://icones.pro/wp-content/uploads/2021/03/icone-linkedin-ronde-violet.png" alt="" />
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1ejlONkY_fnUvb_M1YoUTlJ1R2jW6C4D3ZpN6ImF5Zzgu2gF9J5NbSw-LYyy9y_333kM&usqp=CAU"
+                    alt="" />
+            </div>
+            <div>
+                <img src="https://www.kindpng.com/picc/m/11-110438_transparent-facebook-icon-transparent-png-facebook-blue-cmyk.png"
+                    alt="" />
+            </div>
+        </div>
+    </div>
+    <div id="footer3">
+        <div id="toop1">
+            <div>Job Seekers</div>
+            <div>Employers</div>
+            <div>Monster</div>
+            <div>Stay Connected</div>
+            <div>Legal</div>
+        </div>
+        <div id="bot">
+            <div>
+                <p>Job Search</p>
+                <p>Job Seekers Login</p>
+                <p>Upload Resume</p>
+                <p>Career Advice</p>
+                <p>Search Tips</p>
+                <p>Free Job Alert</p>
+                <p>Find Companies</p>
+                <p>Help</p>
+            </div>
+            <div>
+                <p>Employer Login</p>
+                <p>Job Posting</p>
+                <p>Access Resume Database</p>
+                <p>Join mRecruiters</p>
+                <p>Buy Online</p>
+            </div>
+            <div>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Career with us</p>
+                <p>Send Feedback</p>
+                <p>Testimonials</p>
+                <p>HTML Sitemap</p>
+                <p>XML Sitemap</p>
+                <p>Jobs App</p>
+            </div>
+            <div id="goo">
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Linkedin</p>
+                <p>Instagram</p>
+                <p>Youtube</p>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/public/default/images/android-footer.png" alt="" />
+                </div>
+                <div>
+                    <img src="https://media.monsterindia.com/trex/public/default/images/ios-footer.png" alt="" />
+                </div>
+            </div>
+            <div>
+                <p>Security & Fraud</p>
+                <p>Privacy Policy</p>
+                <p>Terms of Use</p>
+                <p>Beware of Fraudsters</p>
+                <p>Be Safe</p>
+                <p>Complaints</p>
+            </div>
+        </div>
+    </div>
+    <div id="righT">
+        <p>© 2021 Monster - All Rights Reserved</p>
+    </div>
+</body>
+<script src="./jobsearch.js"></script>
+
+</html>
