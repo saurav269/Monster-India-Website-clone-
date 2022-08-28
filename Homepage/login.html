@@ -42,8 +42,9 @@
             margin-bottom: 50px;
             cursor: pointer;
         }
-        form a{
-            text-decoration: none;
+        form 
+        h1{
+            color: #5d4da8;
         }
         p{
             font-family: arial;
@@ -284,13 +285,13 @@
 </head>
 <body>
     <form>
-        <h1><a href= "index.html">WELCOME!</a></h1>
+        <h1 id="text">WELCOME!</h1>
         <h2>Log in using your Monster credentials</h2>
         <input type="email" placeholder=" Email" id="email"><br></br>
         <input type="password" placeholder=" Password" id="password"> <br></br>
         <button id="btn">Login</button>
         <p>Forget <span>Password?</span></p>
-        <p>Don't have an account? <span>Sign Up</span></p>
+        <!-- <p>Don't have an account? <span>Sign Up</span></p> -->
     </form>
     <div id="or">---------- OR ----------</div>
     <div id="soci">
@@ -466,22 +467,5 @@
         </div>
     </div>
 </body>
-<script>
-    document.querySelector("#btn").addEventListener("click",detail)
-
-    function detail(event){
-        event.preventDefault()
-        let mail = document.querySelector("#email").value;
-        let pass = document.querySelector("#password").value;
-
-        let obj={
-            mail,pass
-        }
-        if(obj.mail == "" || obj.pass==""){
-            alert("Some Fields are missing")
-        }else{
-            alert("Login Successfully")
-        }
-    }
-</script>
+<script src="./login.js"></script>
 </html>
