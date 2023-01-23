@@ -19,6 +19,7 @@ https://brilliant-caramel-dc05c8.netlify.app/
 <h5>✨Authentication</h5>
 <h5>✨Job Search</h5>
 <h5>✨Job Details</h5>
+
 ---
  <h3>Some Glimps of Project :</h3>
 
